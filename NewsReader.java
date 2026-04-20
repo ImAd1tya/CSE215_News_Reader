@@ -11,15 +11,6 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-// =====================================================================
-//  NEWS READER — Single File Version (Java OOP + Swing GUI)
-//  HOW TO RUN IN INTELLIJ:
-//  1. File → New → Project → Name it "NewsReader" → Create
-//  2. Right-click "src" folder → New → Java Class → name it "NewsReader"
-//  3. DELETE all existing code in the file
-//  4. Paste THIS entire file
-//  5. Click the green ▶ Run button
-// =====================================================================
 
 public class NewsReader {
 
@@ -51,17 +42,17 @@ public class NewsReader {
         String getCategory()    { return category; }
     }
 
-    // ═════════════════════════════════════════════════════════════════
+ 
     //  SERVICE INTERFACE  (OOP: Abstraction)
-    // ═════════════════════════════════════════════════════════════════
+   
     interface NewsService {
         List<Article> fetchHeadlines(String category) throws Exception;
     }
 
-    // ═════════════════════════════════════════════════════════════════
+  
     //  SERVICE IMPLEMENTATION  (OOP: Polymorphism / implements)
     //  Uses GNews.io free public API — no sign-up needed for demo key
-    // ═════════════════════════════════════════════════════════════════
+
     static class GNewsService implements NewsService {
 
         @Override
@@ -179,9 +170,9 @@ public class NewsReader {
         }
     }
 
-    // ═════════════════════════════════════════════════════════════════
+ 
     //  ARTICLE CARD PANEL  (OOP: Inheritance — extends JPanel)
-    // ═════════════════════════════════════════════════════════════════
+
     static class ArticleCard extends JPanel {
 
         ArticleCard(Article a) {
@@ -259,9 +250,9 @@ public class NewsReader {
         }
     }
 
-    // ═════════════════════════════════════════════════════════════════
+ 
     //  MAIN WINDOW  (OOP: Inheritance — extends JFrame)
-    // ═════════════════════════════════════════════════════════════════
+  
     static class MainFrame extends JFrame {
 
         // OOP: Composition — MainFrame HAS-A NewsService
